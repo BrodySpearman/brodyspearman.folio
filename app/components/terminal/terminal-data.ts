@@ -1,0 +1,69 @@
+const sessionId = Math.random().toString(36).substring(2, 25);
+
+// TODO: add working \n tags to replace empty string entries.
+
+// In text tags
+// ?[number]? = fixed next-line delay in ms 
+// LOADING_PROGRESS ![number]! = progress bar with duration in ms
+
+export const terminalData = [
+    'Instance created',
+    'If you want to skip the simulated terminal, hit [space]',
+    'Connection initialized at 192.0.2.1 ?0?',
+    `Session created: session id: 0x${sessionId} ?0?`,
+    '?0?',
+    '-- Bundling fake packages',
+    '-- Loading npm modules ?0?',
+    'LOADING_PROGRESS !10! ?0?',
+    '-- Loading python modules ?0?',
+    'LOADING_PROGRESS !10! ?0?',
+    '-- Creating venv instance ?1000?',
+    '-- Configuring RubyGems ?0?',
+    'LOADING_PROGRESS !5! ?0?',
+    '-- Importing Gems',
+    '-- Importing Go modules',
+    '-- Adding WebAssembly ?0?',
+    'LOADING_PROGRESS !50! ?0?',
+    '-- Installing Rust crates ?0?',
+    'LOADING_PROGRESS !5! ?0?',
+    '-- Installing Zig packages ?0?',
+    'LOADING_PROGRESS !5! ?0?',
+    '-- parsing requirements.txt ?0?',
+    '-- Installing more dependencies ?0?',
+    'LOADING_PROGRESS !100! ?0?',
+    '-- Bundling assets ?500?',
+    '-- Initializing web server ?200?',
+    '?0?',
+    '-- Loading portfolio... ?0?',
+    'LOADING_PROGRESS !200! ?0?',
+
+    '-- Loading complete',
+    '?0?', // I need to develop a tag to skip lines because this is rediculous.
+    '?0?',
+    '?0?',
+    '?0?',
+    '?0?',
+    '?0?',
+    '?0?',
+    '?0?',
+    '?0?',
+    '?0?',
+    '?0?',
+    'RANDOM_ASCII_ART', // tag to display ascii art
+    '?0?',
+    '?0?',
+    '?0?',
+    '     =============================== ?0?',
+    '     || Welcome to my portfolio!  || ?0?',
+    '     || Created by Brody Spearman || ?0?',
+    '     =============================== ?0?',
+    '?0?',
+    '?0?',
+    'This site is meant to be a showcase of my skills as a full stack developer.',
+    'All code on this site and other projects by me are hand-written.',
+    'If you like what you see, please contact me using the contact form after this landing page.',
+    '?0?',
+    '?0?',
+    '?0?',
+    'Please hit [space] or click to continue.'
+]
