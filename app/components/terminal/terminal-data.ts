@@ -38,7 +38,6 @@ export const terminalData = [
     '?0?',
     '-- Loading portfolio... ?0?',
     'LOADING_PROGRESS !200! ?0?',
-
     '-- Loading complete',
     '?0?', // I need to develop a tag to skip lines because this is rediculous.
     '?0?',
@@ -62,7 +61,7 @@ export const terminalData = [
     '?0?',
     '?0?',
     'This site is meant to be a showcase of my skills as a full stack developer.',
-    'All code on this site and other projects by me are hand-written.',
+    'All code on this site and other projects by me are hand-written by me.',
     'Ascii art for the terminal sourced or generated online. Refresh the page to see a new artpiece.',
     'If you like what you see, please contact me using the contact form after this landing page.',
     '?0?',

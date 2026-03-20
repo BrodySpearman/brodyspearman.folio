@@ -4,16 +4,13 @@ import { terminalData } from "./terminal-data";
 import TerminalRow from "./terminal-row/terminal-row";
 
 export default function Terminal() {
-    // keep track of which rows have been spawned into DOM
-    const [visibleRows, setVisibleRows] = useState<string[]>([]);
-    // track index of line that is currently typing
-    const [currentRowIndex, setCurrentRowIndex] = useState(0);
+    const [visibleRows, setVisibleRows] = useState<string[]>([]); // track rows spawned into DOM
+    const [currentRowIndex, setCurrentRowIndex] = useState(0); // track current line index
 
     const delayNum = (text: string) => { // delay tag value getter e.g. ?100?
         const match = text.match(/\?([0-2000]+)\?/);
         return match ? Number(match[1]) : null;
     };
-
     const cleanText = (text: string) => text.replace(/\s*\?[0-9]+\?/g, ''); // tag replace helper
 
     useEffect(() => {

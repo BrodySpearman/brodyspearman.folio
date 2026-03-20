@@ -28,6 +28,17 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  .scrollbar::-webkit-scrollbar {
+    display: block;
+    width: .25rem;
+    background-color: #0a0a0a;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: #3f3f3f;
+  }
+
 }
 
 body {
