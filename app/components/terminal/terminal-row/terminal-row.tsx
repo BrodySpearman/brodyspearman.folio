@@ -54,7 +54,6 @@ export default function TerminalRow(props: TerminalRowProps) {
         case props.text.startsWith("LOADING_PROGRESS"): {
             const match = props.text.match(/!([0-9]+)!/);
             const extractedSpeed = match ? Number(match[1]) : 1;
-            console.log(extractedSpeed);
 
             return <ProgressBar
                 progressSpeed={extractedSpeed}

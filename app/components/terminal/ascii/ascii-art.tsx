@@ -25,7 +25,11 @@ export default function AsciiArt({ onComplete }: AsciiArtProps) {
     });
 
     useEffect(() => {
-        if (onComplete) onComplete();
+        const timeOutId = setTimeout(() => {
+            if (onComplete) onComplete();
+        }, 50);
+
+        return () => clearTimeout(timeOutId);
     }, [onComplete]);
 
     return (
