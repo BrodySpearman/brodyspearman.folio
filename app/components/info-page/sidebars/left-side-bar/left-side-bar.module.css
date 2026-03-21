@@ -1,0 +1,178 @@
+.leftSideBar {
+    display: block;
+    align-items: center;
+    width: 18%;
+    height: 98vh;
+    border-right: .1rem solid #2c2c2c;
+    margin-right: 1rem;
+    top: .5rem;
+
+}
+
+.creatorProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: -1rem;
+}
+
+.creatorProfileImage {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portrait {
+    border-radius: 50%;
+    border: .2rem solid #f5b400ec;
+    padding: .3rem;
+}
+
+.sideBarTitleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 1.5rem;
+}
+
+.nameTag {
+    font-size: 1.55rem;
+    font-weight: 500;
+    color: #e0e0e0;
+    font-family: var(--font-ibm-mono);
+    margin-top: .25rem;
+}
+
+.sideBarSub {
+    font-size: 1.2rem;
+    color: #f5b400b4;
+    font-weight: 400;
+    font-family: var(--font-ibm-sans);
+    line-height: 1.25rem;
+    margin-bottom: .2rem;
+}
+
+.personalInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.personalInfoListTag {
+    width: 100%;
+
+}
+
+.personalInfoDivide {
+    border-bottom: .1rem solid #2c2c2c;
+    border-top: .1rem solid #2c2c2c;
+    width: 90%;
+    padding: .5rem 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1rem;
+}
+
+.personalInfoItemBold {
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    color: #f5b400ec !important;
+}
+
+.personalInfoItem {
+    margin: 0 .6rem;
+    font-size: .85rem;
+    color: #777777;
+    font-weight: 400;
+    font-family: var(--font-ibm-sans);
+    line-height: 1.35rem;
+}
+
+.locTag {
+    font-size: .9rem;
+    color: #777777;
+    font-weight: 400;
+    font-family: var(--font-ibm-sans);
+    line-height: 1.35rem;
+    margin-bottom: .5rem;
+}
+
+.splitter {
+    width: 50%;
+    height: .05rem;
+    background-color: #f5b400ec;
+    margin: auto;
+    margin-bottom: 2.5rem;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: column;
+}
+
+.navButton {
+    width: 100%;
+    font-family: var(--font-ibm-sans);
+    text-align: right;
+    padding: 1rem 1rem;
+    color: #949494;
+    font-size: 1.4rem;
+    font-weight: 400;
+    background-color: #000000;
+    border: .1rem solid transparent;
+    border-top-color: #2c2c2c;
+    transition: .2s;
+}
+
+.homeIcon {
+    transform: translateY(-.22rem);
+}
+
+.navButtonList {
+    width: 100%;
+    z-index: 1000;
+}
+
+.navButtonIcon {
+    margin-left: .5rem;
+    vertical-align: middle;
+}
+
+.sourceCodeButton {
+    border-bottom: .1rem solid #2c2c2c;
+}
+
+.navButton:hover {
+    transition: .2s;
+    width: 150%;
+    border-left-color: transparent !important;
+}
+
+.aboutButton:hover {
+    border: .01rem solid #a30000;
+    color: #a30000;
+}
+
+.projectsButton:hover {
+    border: .01rem solid #3f8300;
+    color: #3f8300;
+}
+
+.contactButton:hover {
+    border: .01rem solid #000fe6;
+    color: #000fe6;
+}
+
+.sourceCodeButton:hover {
+    border: .01rem solid #e0d100;
+    color: #e0d100;
+}

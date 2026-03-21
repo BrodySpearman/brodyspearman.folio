@@ -18,7 +18,7 @@ export const terminalData = [
     'LOADING_PROGRESS !10! ?0?',
     '-- Loading python modules ?0?',
     'LOADING_PROGRESS !10! ?0?',
-    '-- Creating venv instance ?1000?',
+    '-- Creating venv instance ?500?',
     '-- Configuring RubyGems ?0?',
     'LOADING_PROGRESS !5! ?0?',
     '-- Importing Gems',

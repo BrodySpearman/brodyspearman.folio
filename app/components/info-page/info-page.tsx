@@ -1,30 +1,13 @@
 'use client';
 import styles from './info-page.module.css';
-import Image from 'next/image';
-import Logo from '../logo/logo';
+import LeftSideBar from './sidebars/left-side-bar/left-side-bar';
+import RightSideBar from './sidebars/right-side-bar/right-side-bar';
 
 export default function InfoPage() {
     return (
         <div className={styles.infoPageWrapper}>
 
-            <div className={styles.leftSideBar}>
-                <div className={styles.creatorProfile}>
-                    <div className={styles.creatorProfileImage}>
-                        <Image
-                            className={styles.portrait}
-                            src="/portrait.svg"
-                            alt="Creator Profile"
-                            width={225}
-                            height={225}
-                        />
-                    </div>
-                </div>
-
-                <div className={styles.sideBarTitleContainer}>
-                    <h1 className={`${styles.sideBarTitle}`}>Brody Spearman</h1>
-                    <h2 className={`${styles.sideBarSub}`}>Aspiring developer</h2>
-                </div>
-            </div>
+            <LeftSideBar />
 
             <div className={`${styles.infoContainer} overflow-y-auto scrollbar`}>
                 <div className={styles.infoTitleContainer}>
@@ -37,7 +20,7 @@ export default function InfoPage() {
                         <h3 className={`${styles.subTitle}`}>Who am I?</h3>
 
                         <p className={`${styles.bodyText}`}>
-                            Hi, I'm Brody Spearman, an aspiring developer born and raised in Sioux City, Iowa. I
+                            Hi, I'm Brody (John) Spearman, an aspiring developer born and raised in Sioux City, Iowa. I
                             believe that I am a very focused and organized coder, motivated and passionate about
                             writing clean, maintainable, and scalable applications. I've been writing code and
                             developing projects for over 5 years, and now I'm looking to start my career as a
@@ -67,11 +50,11 @@ export default function InfoPage() {
                         </ul>
 
                         <p className={`${styles.bodyText}`}>
-                            Alas, I found myself falling in love with web development. Since then, I've been
-                            obsessed with learning about every aspect of it, front and back end. While college gave
+                            I found myself falling in love with web development. Since then, I've been
+                            obsessed with learning about every aspect of it, front to back end. While college gave
                             me a great foundation of principles to build off of, I know that improving my development
-                            skills doesn't end with gradutation. Since graduating I've been entirely focused on
-                            building full stack medium-large scale applications using all of this knowledge that I've
+                            skills doesn't end with graduation. Since graduating I've been wholly focused on
+                            building full stack medium-large scale applications using all the knowledge I've
                             acquired.
                         </p>
 
@@ -94,20 +77,9 @@ export default function InfoPage() {
                     </div>
                 </div>
             </div>
-            <div className={styles.rightSideBar}>
-                <div className={styles.logo}>
-                    <Logo />
-                </div>
-                <div className={styles.quoteContainer}>
-                    <h3 className={`${styles.quoteTitle}`}>Quote of the session:</h3>
-                    <p className={`${styles.quoteText} ${styles.quoteBody}`}>
-                        "True idiots admire complexity, but a genius admires simplicity."
-                    </p>
-                    <p className={`${styles.quoteText} ${styles.quoteAuthor}`}>
-                        <span className={`${styles.quoteAuthorAccent}`}>-</span> Terry A. Davis <span className={`${styles.quoteAuthorAccent}`}>-</span>
-                    </p>
-                </div>
-            </div>
+
+            <RightSideBar />
+
         </div>
     );
 }
