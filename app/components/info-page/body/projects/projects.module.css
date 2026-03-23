@@ -1,0 +1,26 @@
+.projectsIntroText {
+    margin-bottom: 4rem;
+}
+
+.projectsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    width: 43%;
+    gap: 1rem;
+    border: 1px solid #444444;
+}
+
+.projectCard img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+}

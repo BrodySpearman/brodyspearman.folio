@@ -1,7 +1,18 @@
 import styles from './left-side-bar.module.css';
 import Image from 'next/image';
 
-export default function LeftSideBar() {
+import { FaLaptopCode } from "react-icons/fa";
+import { PiCube } from "react-icons/pi";
+import { TbBrandLinkedin } from "react-icons/tb";
+import { BiHomeAlt } from "react-icons/bi";
+import { RiMailSendLine, RiGithubFill } from "react-icons/ri";
+
+export default function LeftSideBar({ switchBodyState }: { switchBodyState: (bodyState: string) => void }) {
+
+    const handleClick = (bodyState: string) => {
+        switchBodyState(bodyState);
+    }
+
     return (
         <div className={styles.leftSideBar}>
 
@@ -35,17 +46,19 @@ export default function LeftSideBar() {
                         </div>
 
                         <div className={`${styles.personalInfoDivide}`}>
-                            <li className={`${styles.personalInfoItemBold} ${styles.personalInfoItem}`}>Important Links</li>
+                            <li className={`${styles.personalInfoItemBold} ${styles.personalInfoItem} ${styles.linkListTitle}`}>Important Links</li>
 
-                            <li className={`${styles.personalInfoLink} ${styles.personalInfoItem}`}>
-                                <a href="https://github.com/brodyspearman" target="_blank" rel="noopener noreferrer">
-                                    GitHub
+                            <li className={`${styles.personalInfoItem} ${styles.linkListItem}`}>
+                                <a className={`${styles.personalInfoLink}`} href="https://github.com/brodyspearman" target="_blank" rel="noopener noreferrer">
+                                    <span className={`${styles.linkListText}`}>GitHub</span>
+                                    <RiGithubFill className={`${styles.linkListIcon}`} size={20} color="#3aad53ec" />
                                 </a>
                             </li>
 
-                            <li className={`${styles.personalInfoLink} ${styles.personalInfoItem}`}>
-                                <a href="https://www.linkedin.com/in/brody-spearman/" target="_blank" rel="noopener noreferrer">
-                                    LinkedIn
+                            <li className={`${styles.personalInfoItem} ${styles.linkListItem}`}>
+                                <a className={`${styles.personalInfoLink}`} href="https://www.linkedin.com/in/brody-spearman/" target="_blank" rel="noopener noreferrer">
+                                    <span className={`${styles.linkListText}`}>LinkedIn</span>
+                                    <TbBrandLinkedin className={`${styles.linkListIcon}`} size={18} color="#5a86e6ec" />
                                 </a>
                             </li>
                         </div>
@@ -59,33 +72,28 @@ export default function LeftSideBar() {
             <div className={`${styles.personalInfo} ${styles.navBar}`}>
                 <ul className={`${styles.navButtonList}`}>
                     <li>
-                        <button className={`${styles.navButton} ${styles.aboutButton}`}>
+                        <button onClick={() => handleClick('About')} className={`${styles.navButton} ${styles.aboutButton}`}>
                             About
-                            <span className={`${styles.navButtonIcon} ${styles.homeIcon} material-symbols-outlined`}>
-                                location_home
-                            </span>
+                            <BiHomeAlt className={`${styles.navButtonIcon}`} />
                         </button>
                     </li>
                     <li>
-                        <button className={`${styles.navButton} ${styles.projectsButton}`}>
+                        <button onClick={() => handleClick('Projects')} className={`${styles.navButton} ${styles.projectsButton}`}>
                             Projects
-                            <span className={`${styles.navButtonIcon} material-symbols-outlined`}>
-                                deployed_code
-                            </span>
+                            <PiCube className={`${styles.navButtonIcon}`} />
                         </button>
                     </li>
                     <li>
-                        <button className={`${styles.navButton} ${styles.contactButton}`}>
+                        <button onClick={() => handleClick('Contact')} className={`${styles.navButton} ${styles.contactButton}`}>
                             Contact
-                            <span className={`${styles.navButtonIcon} material-symbols-outlined`}>
-                                mail
-                            </span>
+                            <RiMailSendLine className={`${styles.navButtonIcon}`} />
                         </button>
                     </li>
                     <li>
-                        <button className={`${styles.navButton} ${styles.sourceCodeButton}`}>
+                        <a className={`${styles.navButton} ${styles.sourceCodeButton}`}>
                             Source Code
-                        </button>
+                            <FaLaptopCode className={`${styles.navButtonIcon}`} />
+                        </a>
                     </li>
                 </ul>
 

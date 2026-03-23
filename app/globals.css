@@ -47,6 +47,10 @@ body {
 
 }
 
+.accent {
+  color: #f1b100ec !important;
+}
+
 .terminal-text {
   white-space: pre-wrap;
   font-family: var(--font-ibm-mono);

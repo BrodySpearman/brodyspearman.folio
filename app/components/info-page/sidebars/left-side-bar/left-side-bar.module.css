@@ -2,11 +2,10 @@
     display: block;
     align-items: center;
     width: 18%;
-    height: 98vh;
+    height: 100vh;
     border-right: .1rem solid #2c2c2c;
     margin-right: 1rem;
     top: .5rem;
-
 }
 
 .creatorProfile {
@@ -84,17 +83,45 @@
 
 .personalInfoItemBold {
     font-size: 1rem !important;
-    font-weight: bold !important;
+    font-weight: 500 !important;
     color: #f5b400ec !important;
+
+}
+
+.linkListTitle {
+    margin-bottom: .25rem !important;
 }
 
 .personalInfoItem {
+    text-align: center;
     margin: 0 .6rem;
-    font-size: .85rem;
+    font-size: .9rem;
     color: #777777;
     font-weight: 400;
     font-family: var(--font-ibm-sans);
     line-height: 1.35rem;
+}
+
+.personalInfoLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem !important;
+    transition: .1s;
+}
+
+.personalInfoLink:hover .linkListText {
+    color: #ebebebec;
+    transition: .1s;
+}
+
+.linkListItem {
+    margin-bottom: .25rem !important;
+}
+
+.linkListIcon {
+    margin-left: .25rem;
 }
 
 .locTag {
@@ -120,6 +147,9 @@
 }
 
 .navButton {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     width: 100%;
     font-family: var(--font-ibm-sans);
     text-align: right;
@@ -143,7 +173,7 @@
 }
 
 .navButtonIcon {
-    margin-left: .5rem;
+    margin-left: .75rem;
     vertical-align: middle;
 }
 
