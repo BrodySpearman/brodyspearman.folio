@@ -27,7 +27,7 @@ export default function Home() {
   return pageState === 'info-page' ? (
     <div className="flex flex-col max-h-screen min-h-screen bg-zinc-50 dark:bg-black">
       <main>
-        <InfoPage />
+        <InfoPage pageState={pageState} />
       </main>
     </div>
   ) : (

@@ -13,14 +13,34 @@
 .projectCard {
     display: flex;
     flex-direction: column;
-    height: 15rem;
+    height: 12rem;
     width: 43%;
     gap: 1rem;
     border: 1px solid #444444;
+    transition: .3s;
+}
+
+.projectCard:hover {
+    border-color: #f1b100ec;
+    margin-top: -.5rem;
 }
 
 .projectCard img {
     height: 100%;
     width: 100%;
     object-fit: scale-down;
+}
+
+.projectCardTag {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: var(--font-ibm-sans);
+    font-size: .95rem;
+    color: #cacaca;
+
+}
+
+.buff {
+    background-color: #0a0a0a;
 }
