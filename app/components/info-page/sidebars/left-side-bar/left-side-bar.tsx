@@ -21,7 +21,7 @@ export default function LeftSideBar({ switchBodyState }: { switchBodyState: (bod
                 <div className={styles.creatorProfileImage}>
                     <Image
                         className={styles.portrait}
-                        src="/portrait.svg"
+                        src="/pfp.jpg"
                         alt="Creator Profile"
                         width={225}
                         height={225}

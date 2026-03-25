@@ -78,7 +78,14 @@ export default function About() {
 
                     <h3 className={`${styles.subTitle}`}>My Work So Far</h3>
                     <p className={`${styles.bodyText}`}>
-                        My free time is currently consumed by working on my personal projects.
+                        My free time is currently consumed by working on personal projects. I try to increase the scale of
+                        production with each project I build, with a large beleif in my ability to deliver quality, production-ready
+                        applications. Most of my work so far is full-stack development involving React/Python, although in the future
+                        I want to develop standalone applications using C++ and other systems-level languages.
+                        <br></br><br></br>
+                        I'm currently looking to get my foot in the door in the professional software development scene. If interested,
+                        contact me using the sidebar on the left!
+
                     </p>
                 </div>
             </div>

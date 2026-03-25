@@ -29,6 +29,9 @@
     border-radius: 50%;
     border: .2rem solid #f5b400ec;
     padding: .3rem;
+    width: 225px;
+    height: 225px;
+    object-fit: cover;
 }
 
 .sideBarTitleContainer {
