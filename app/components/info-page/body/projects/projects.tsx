@@ -24,20 +24,24 @@ export default function Projects() {
             </p>
             <div className={`${styles.projectsContainer}`}>
                 <div className={`${styles.projectCard} ${styles.buff}`}>
-                    <Image
-                        src="/projects/Buff.png"
-                        alt=""
-                        width={400}
-                        height={400}
-                    />
+                    <a className={`${styles.projectLink}`} href="https://buffshortener.vercel.app" target="_blank" rel="noopener noreferrer">
+                        <Image
+                            src="/projects/Buff.png"
+                            alt=""
+                            width={400}
+                            height={400}
+                        />
+                    </a>
                 </div>
                 <div className={`${styles.projectCard} ${styles.globeview}`}>
-                    <Image
-                        src="/projects/Globeview.png"
-                        alt=""
-                        width={400}
-                        height={400}
-                    />
+                    <a className={`${styles.projectLink}`} href="https://globeview-eight.vercel.app" target="_blank" rel="noopener noreferrer">
+                        <Image
+                            src="/projects/Globeview.png"
+                            alt=""
+                            width={400}
+                            height={400}
+                        />
+                    </a>
                 </div>
             </div>
         </>
