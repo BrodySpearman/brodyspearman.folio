@@ -1,0 +1,54 @@
+.contactIntroText {
+    margin-bottom: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 95%;
+    margin-left: 1rem;
+}
+
+.formInput {
+    border: .1rem solid #444444;
+    padding: .5rem;
+    font-family: var(--font-ibm-sans);
+    font-size: 1rem;
+    color: #cacaca;
+    background-color: #0a0a0a8c;
+}
+
+.inputName {
+    width: 30% !important;
+}
+
+.inputEmail {
+    width: 45% !important;
+}
+
+.inputMessage {
+    width: 100% !important;
+    min-height: 10rem !important;
+    margin-bottom: -.5rem;
+}
+
+.formButton {
+    width: 30%;
+    padding: .5rem;
+    font-family: var(--font-ibm-sans);
+    font-weight: 500;
+    font-size: 1rem;
+    color: #cacaca;
+    background-color: #0a0a0a8c;
+    border: .1rem solid #444444;
+    border-top: none;
+    margin-left: auto;
+    transition: .2s;
+}
+
+.formButton:hover {
+    background-color: #f1b100ec;
+    color: #0a0a0a;
+    transition: .2s;
+}

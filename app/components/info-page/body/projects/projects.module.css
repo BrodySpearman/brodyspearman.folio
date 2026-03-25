@@ -38,9 +38,12 @@
     font-family: var(--font-ibm-sans);
     font-size: .95rem;
     color: #cacaca;
-
 }
 
 .buff {
     background-color: #0a0a0a;
+}
+
+.globeview {
+    background-color: #23272a;
 }

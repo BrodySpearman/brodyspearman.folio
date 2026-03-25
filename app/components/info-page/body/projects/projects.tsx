@@ -31,16 +31,14 @@ export default function Projects() {
                         height={400}
                     />
                 </div>
-                <div className={`${styles.projectCard}`}>
+                <div className={`${styles.projectCard} ${styles.globeview}`}>
                     <Image
                         src="/projects/Globeview.png"
                         alt=""
                         width={400}
                         height={400}
                     />
-                    <p className={`${styles.projectCardTag}`}>Globeview</p>
                 </div>
-
             </div>
         </>
     );

@@ -90,7 +90,7 @@ export default function LeftSideBar({ switchBodyState }: { switchBodyState: (bod
                         </button>
                     </li>
                     <li>
-                        <a className={`${styles.navButton} ${styles.sourceCodeButton}`}>
+                        <a className={`${styles.navButton} ${styles.sourceCodeButton}`} href="https://github.com/BrodySpearman/brodyspearman.folio" target="_blank" rel="noopener noreferrer">
                             Source Code
                             <FaLaptopCode className={`${styles.navButtonIcon}`} />
                         </a>
