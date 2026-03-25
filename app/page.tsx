@@ -10,6 +10,8 @@ export default function Home() {
   const [pageState, setPageState] = useState('landing');
 
   useEffect(() => {
+    if (pageState !== 'landing') return;
+
     const keyListener = (e: KeyboardEvent) => {
       if (e.code === 'Space') {
         e.preventDefault();
@@ -21,7 +23,7 @@ export default function Home() {
     return () => {
       window.removeEventListener('keydown', keyListener);
     }
-  }, []);
+  }, [pageState]);
 
 
   return pageState === 'info-page' ? (

@@ -1,7 +1,39 @@
+'use client';
+import { useState } from 'react';
 import styles from './contact.module.css';
 import titleStyles from '../about/about.module.css';
 
 export default function Contact() {
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus('sending');
+
+        try {
+            const response = await fetch('/api/email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, message }),
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setEmail('');
+                setMessage('');
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+            setStatus('error');
+        }
+    };
+
     return (
         <>
             <div className={titleStyles.infoTitleContainer}>
@@ -19,10 +51,34 @@ export default function Contact() {
             </p>
 
             <div className={`${styles.formContainer}`}>
-                <form className={`${styles.form}`}>
-                    <input type="email" placeholder="Email" className={`${styles.formInput} ${styles.inputEmail}`} />
-                    <textarea placeholder="Message" className={`${styles.formInput} ${styles.inputMessage}`}></textarea>
-                    <button type="submit" className={`${styles.formButton}`}>Send</button>
+                <form className={`${styles.form}`} onSubmit={handleSubmit}>
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        className={`${styles.formInput} ${styles.inputEmail}`}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+
+                    <textarea
+                        placeholder="Message"
+                        className={`${styles.formInput} ${styles.inputMessage}`}
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        required
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        className={`${styles.formButton}`}
+                        disabled={status === 'sending'}
+                    >
+                        {status === 'sending' ? 'Sending...' : 'Send'}
+                    </button>
+
+                    {status === 'success' && <p className={`${styles.formMessage} ${styles.success}`}>Email sent successfully!</p>}
+                    {status === 'error' && <p className={`${styles.formMessage} ${styles.error}`}>Failed to send email. Please try again.</p>}
                 </form>
             </div>
         </>
