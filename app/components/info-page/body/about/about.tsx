@@ -77,7 +77,7 @@ export default function About() {
                     </p>
 
                     <h3 className={`${styles.subTitle}`}>My Work So Far</h3>
-                    <p className={`${styles.bodyText}`}>
+                    <p className={`${styles.bodyText} ${styles.conclusion}`}>
                         My free time is currently consumed by working on personal projects. I try to increase the scale of
                         production with each project I build, with a large beleif in my ability to deliver quality, production-ready
                         applications. Most of my work so far is full-stack development involving React/Python, although in the future
