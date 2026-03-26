@@ -27,13 +27,13 @@ export default function Home() {
 
 
   return pageState === 'info-page' ? (
-    <div className="flex flex-col max-h-screen min-h-screen bg-zinc-50 dark:bg-black">
+    <div className="flex flex-col max-h-screen min-h-screen">
       <main>
         <InfoPage pageState={pageState} />
       </main>
     </div>
   ) : (
-    <div className="flex flex-col max-h-screen min-h-screen bg-zinc-50 dark:bg-black">
+    <div className="flex flex-col max-h-screen min-h-screen">
       <main className="mt-auto">
         <div className="fixed top-0 right-0 mr-5">
           <Logo />
